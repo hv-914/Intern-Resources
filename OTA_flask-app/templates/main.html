@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        textarea {
+            width: 95%;
+            height: 600px;
+            font-size: 16px;
+            font-family: monospace;
+            padding: 10px;
+        }
+        #loader {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 9999;
+        }
+
+        .spinner {
+            width: 50px;
+            height: 50px;
+            border: 5px solid rgba(0, 0, 0, 0.1);
+            border-top: 5px solid #000;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <h2>Welcome, {{ username }}!</h2>
+    <form id="credentialsForm">
+        <input type="text" id="ssid" name="ssid" required>
+        <label for="ssid">WiFi SSID:</label>
+        
+        <input type="password" id="ssidPwd" name="ssidPwd" required>
+        <label for="ssidPwd">WiFi Password:</label>
+    
+        <button type="submit">Save</button>
+    </form>
+    
+    <br>
+    <textarea id="code" placeholder="Write your code here..."></textarea>
+
+    <br>
+
+    <button id="compile">Compile</button>
+    <button id="upload">Upload</button>
+
+    <div id="loader" style="display: none;">
+        <div class="spinner"></div>
+    </div>
+    
+    <p id="downloadLinkContainer" style="display: none;">
+        <strong>Download Link:</strong>
+        <input type="text" id="downloadLink" readonly>
+        <button id="copyLink">Copy</button>
+    </p>
+    
+    <br><br>
+    
+    <a href="{{ url_for('logout') }}">Logout</a>
+
+    <script src = "{{ url_for('static', filename = 'main.js')}}"></script>
+
+</body>
+</html>

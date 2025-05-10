@@ -1,0 +1,33 @@
+
+Works/Projects done:
+
+Custom Object detections:
+-> Manual Annotations for images
+-> Python
+-> Image Classification using Yolo algorithms
+
+Lane Detection/Line Detection for AI-Lite with custom firmware
+-> Python
+-> ArduinoIDE
+-> Embedded C++
+-> Networking (UDP Protocol)
+-> Opencv
+-> Object Detection using Yolo Algorithms
+-> Image Processing
+
+Web Application for Over The Air Transmissions:
+-> Python
+-> JavaScript
+-> Flask
+-> SQLAlchemy
+-> html
+-> Embedded C++
+
+Firmware for HuskeyLens:
+-> ArduinoIDE
+-> Embedded C++
+-> Image Classification
+
+Structuring Installation Scripts for mac Devices:
+-> Linux
+-> Shell Scripting

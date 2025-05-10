@@ -1,0 +1,6 @@
+train: /home/peanut/Downloads/train/images
+val: /home/peanut/Downloads/valid/images
+test: /home/peanut/Downloads/test/images
+
+nc: 4
+names: ['Beach', 'House', 'Office', 'School']
